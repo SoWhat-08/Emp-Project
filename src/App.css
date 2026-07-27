@@ -1,0 +1,481 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 66px;
+  background-color: #1e3a5f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.navbar h2 {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
+
+.navbar div {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar button {
+  padding: 10px 16px;
+  background-color: white;
+  color: #1e3a5f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar button:hover {
+  background-color: #dbeafe;
+}
+
+
+/* =========================
+   COMMON PAGE
+========================= */
+
+.page {
+  min-height: calc(100vh - 66px);
+  padding: 50px 20px;
+}
+
+
+/* =========================
+   HOME - BLUE
+========================= */
+
+.home-page {
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #93c5fd
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-content {
+  max-width: 800px;
+}
+
+.home-content h1 {
+  color: #123a66;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  color: #1e3a5f;
+  font-size: 18px;
+  margin: 10px;
+}
+
+
+/* =========================
+   LOGIN - PURPLE
+========================= */
+
+.login-page {
+  background: linear-gradient(
+    135deg,
+    #ede9fe,
+    #c4b5fd
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  border-top: 6px solid #6d28d9;
+}
+
+.login-box h1 {
+  color: #5b21b6;
+}
+
+
+/* =========================
+   REGISTER - GREEN
+========================= */
+
+.register-page {
+  background: linear-gradient(
+    135deg,
+    #dcfce7,
+    #86efac
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-box {
+  border-top: 6px solid #15803d;
+}
+
+.register-box h1 {
+  color: #166534;
+}
+
+
+/* =========================
+   COMMON FORM BOX
+========================= */
+
+.form-box {
+  width: 480px;
+  padding: 45px 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-box h1 {
+  margin-bottom: 10px;
+}
+
+.form-box p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box input {
+  padding: 13px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-box input:focus {
+  border-color: #1e3a5f;
+}
+
+.form-box button,
+.page-button {
+  padding: 13px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* Login Button */
+
+.login-box button {
+  background-color: #6d28d9;
+}
+
+.login-box button:hover {
+  background-color: #5b21b6;
+}
+
+
+/* Register Button */
+
+.register-box button {
+  background-color: #15803d;
+}
+
+.register-box button:hover {
+  background-color: #166534;
+}
+
+
+/* =========================
+   DASHBOARD - ORANGE
+========================= */
+
+.dashboard-page {
+  background: linear-gradient(
+    135deg,
+    #ffedd5,
+    #fdba74
+  );
+
+  text-align: center;
+}
+
+.dashboard-content h1 {
+  color: #c2410c;
+  font-size: 38px;
+}
+
+.dashboard-content > p {
+  color: #7c2d12;
+  font-size: 18px;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  width: 220px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-top: 5px solid #ea580c;
+}
+
+.dashboard-card h2 {
+  color: #ea580c;
+  font-size: 35px;
+  margin: 10px;
+}
+
+.dashboard-card p {
+  color: #555;
+}
+
+
+/* =========================
+   EMPLOYEE LIST - TEAL
+========================= */
+
+.employee-list-page {
+  background: linear-gradient(
+    135deg,
+    #ccfbf1,
+    #5eead4
+  );
+
+  display: flex;
+  justify-content: center;
+}
+
+.employee-list-box {
+  width: 900px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-top: 6px solid #0f766e;
+}
+
+.employee-list-box h1 {
+  color: #0f766e;
+}
+
+.employee-list-box p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #0f766e;
+  color: white;
+  padding: 14px;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f0fdfa;
+}
+
+
+/* =========================
+   ADD EMPLOYEE - INDIGO
+========================= */
+
+.add-employee-page {
+  background: linear-gradient(
+    135deg,
+    #e0e7ff,
+    #a5b4fc
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-employee-box {
+  border-top: 6px solid #4338ca;
+}
+
+.add-employee-box h1 {
+  color: #3730a3;
+}
+
+.add-employee-box button {
+  background-color: #4338ca;
+}
+
+.add-employee-box button:hover {
+  background-color: #3730a3;
+}
+
+
+/* =========================
+   EDIT EMPLOYEE - GOLD
+========================= */
+
+.edit-employee-page {
+  background: linear-gradient(
+    135deg,
+    #fef9c3,
+    #fde047
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-employee-box {
+  border-top: 6px solid #ca8a04;
+}
+
+.edit-employee-box h1 {
+  color: #a16207;
+}
+
+.edit-employee-box button {
+  background-color: #ca8a04;
+}
+
+.edit-employee-box button:hover {
+  background-color: #a16207;
+}
+
+
+/* =========================
+   DELETE EMPLOYEE - RED
+========================= */
+
+.delete-employee-page {
+  background: linear-gradient(
+    135deg,
+    #fee2e2,
+    #fca5a5
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-employee-box {
+  border-top: 6px solid #dc2626;
+}
+
+.delete-employee-box h1 {
+  color: #b91c1c;
+}
+
+.delete-employee-box button {
+  background-color: #dc2626;
+}
+
+.delete-employee-box button:hover {
+  background-color: #b91c1c;
+}
+
+
+/* =========================
+   LOGOUT - GRAY
+========================= */
+
+.logout-page {
+  background: linear-gradient(
+    135deg,
+    #e5e7eb,
+    #9ca3af
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-box {
+  width: 500px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-top: 6px solid #374151;
+}
+
+.logout-box h1 {
+  color: #374151;
+}
+
+.logout-box p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.logout-box button {
+  background-color: #374151;
+  padding: 13px 30px;
+}
+
+.logout-box button:hover {
+  background-color: #1f2937;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+  color: #15803d !important;
+  font-weight: bold;
+  margin-top: 20px;
+}
