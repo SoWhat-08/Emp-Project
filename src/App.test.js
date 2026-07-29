@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders WorkHub navbar', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const navbarHeading = screen.getByText(/WorkHub/i);
+  expect(navbarHeading).toBeInTheDocument();
 });

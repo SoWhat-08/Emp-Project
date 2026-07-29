@@ -32,8 +32,6 @@ function App() {
           <Link to="/dashboard"><button>Dashboard</button></Link>
           <Link to="/employees"><button>Employee List</button></Link>
           <Link to="/add-employee"><button>Add Employee</button></Link>
-          <Link to="/edit-employee"><button>Edit Employee</button></Link>
-          <Link to="/delete-employee"><button>Delete Employee</button></Link>
           <Link to="/logout"><button>Logout</button></Link>
         </div>
 
@@ -46,8 +44,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/employees" element={<EmployeeList />} />
         <Route path="/add-employee" element={<AddEmployee />} />
-        <Route path="/edit-employee" element={<EditEmployee />} />
-        <Route path="/delete-employee" element={<DeleteEmployee />} />
+        <Route path="/edit-employee/:id" element={<EditEmployee />} />
+        <Route path="/delete-employee/:id" element={<DeleteEmployee />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
 
