@@ -9,7 +9,12 @@ pipeline {
 
         stage('Install React Dependencies') {
             steps {
-                bat 'npm install'
+                bat '''
+                if exist node_modules rmdir /s /q node_modules
+                if exist package-lock.json del package-lock.json
+                npm cache clean --force
+                npm install
+                '''
             }
         }
 
@@ -35,6 +40,10 @@ pipeline {
 
         failure {
             echo 'WorkHub Build Failed!'
+        }
+
+        always {
+            cleanWs()
         }
     }
 }
