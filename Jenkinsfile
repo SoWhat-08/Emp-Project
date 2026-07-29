@@ -18,6 +18,8 @@ pipeline {
 
         stage('Build React App') {
             steps {
+                bat 'node -v'
+                bat 'npm -v'
                 bat 'npm run build'
             }
         }
