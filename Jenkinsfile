@@ -9,10 +9,7 @@ pipeline {
 
         stage('Install React Dependencies') {
             steps {
-                bat 'if exist node_modules rmdir /s /q node_modules'
-                bat 'if exist package-lock.json del package-lock.json'
-                bat 'npm cache clean --force'
-                bat 'npm install'
+                bat 'npm ci'
             }
         }
 
