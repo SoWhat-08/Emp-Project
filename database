@@ -1,0 +1,96 @@
+-- ==========================================
+-- WORKHUB EMPLOYEE MANAGEMENT SYSTEM DATABASE
+-- ==========================================
+
+-- Drop database if it already exists (Optional)
+DROP DATABASE IF EXISTS workhub_db;
+
+-- Create Database
+CREATE DATABASE workhub_db;
+
+-- Use Database
+USE workhub_db;
+
+-- ==========================================
+-- USERS TABLE (REGISTER & LOGIN)
+-- ==========================================
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL
+);
+
+-- ==========================================
+-- EMPLOYEES TABLE
+-- ==========================================
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    department VARCHAR(100) NOT NULL
+);
+
+-- ==========================================
+-- SAMPLE EMPLOYEES
+-- ==========================================
+
+INSERT INTO employees (name, email, department)
+VALUES
+('John David', 'john@workhub.com', 'HR'),
+('Emma Wilson', 'emma@workhub.com', 'IT'),
+('Michael Brown', 'michael@workhub.com', 'Finance'),
+('Sophia Taylor', 'sophia@workhub.com', 'Marketing'),
+('Daniel Thomas', 'daniel@workhub.com', 'Development');
+
+-- ==========================================
+-- VIEW ALL USERS
+-- ==========================================
+
+SELECT * FROM users;
+
+-- ==========================================
+-- VIEW ALL EMPLOYEES
+-- ==========================================
+
+SELECT * FROM employees;
+
+-- ==========================================
+-- VIEW EMPLOYEE BY ID
+-- ==========================================
+
+SELECT *
+FROM employees
+WHERE id = 1;
+
+-- ==========================================
+-- UPDATE EMPLOYEE
+-- ==========================================
+
+UPDATE employees
+SET
+    name = 'John David',
+    email = 'john.updated@workhub.com',
+    department = 'Finance'
+WHERE id = 1;
+
+-- ==========================================
+-- DELETE EMPLOYEE
+-- ==========================================
+
+DELETE FROM employees
+WHERE id = 5;
+
+-- ==========================================
+-- DASHBOARD QUERIES
+-- ==========================================
+
+-- Total Employees
+SELECT COUNT(*) AS total
+FROM employees;
+
+-- Total Departments
+SELECT COUNT(DISTINCT department) AS departments
+FROM employees;
