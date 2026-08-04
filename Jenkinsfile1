@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'Node18'
+    }
+
+    stages {
+        stage('Install React Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Build React App') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Install Python Dependencies') {
+            steps {
+                sh 'python3 -m pip install -r requirements.txt'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
